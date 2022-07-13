@@ -9,6 +9,12 @@
       "dynamicImport": true,
       "allowJs": true
     },
+  "minify": {
+      "compress": {
+        "unused": true
+      },
+      "mangle": true
+    },
     "transform": {
       "react": {
         "pragma": "React.createElement",
