@@ -88,19 +88,24 @@ var options = {
         loader: 'html-loader',
         exclude: /node_modules/,
       },
-      { test: /\.(ts|tsx)$/, loader: 'ts-loader', exclude: /node_modules/ },
       {
-        test: /\.(js|jsx)$/,
-        use: [
-          {
-            loader: 'source-map-loader',
-          },
-          {
-            loader: 'babel-loader',
-          },
-        ],
+        test: /\.(js|ts|tsx|jsx)$/,
+        loader: 'swc-loader',
         exclude: /node_modules/,
       },
+      // { test: /\.(ts|tsx)$/, loader: 'ts-loader', exclude: /node_modules/ },
+      // {
+      //   test: /\.(js|jsx)$/,
+      //   use: [
+      //     {
+      //       loader: 'source-map-loader',
+      //     },
+      //     {
+      //       loader: 'babel-loader',
+      //     },
+      //   ],
+      //   exclude: /node_modules/,
+      // },
     ],
   },
   resolve: {
